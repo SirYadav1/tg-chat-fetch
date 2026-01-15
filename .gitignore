@@ -1,0 +1,17 @@
+# Sensitive credentials
+.env
+*.session
+*.session-journal
+
+# Project data (archives and progress)
+Backup_*.txt
+progress.json
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# System
+.DS_Store
+Thumbs.db
