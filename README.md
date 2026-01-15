@@ -50,10 +50,10 @@ Your credentials stay where they belong—on your machine.
 ### 2. Deployment
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/tg-chat-fwtch.git
+git clone https://github.com/SirYadav1/tg-chat-fetch.git
 
 # Navigate to project
-cd tg-chat-fwtch
+cd tg-chat-fetch
 
 # Install optimized dependencies
 pip install -r requirements.txt
