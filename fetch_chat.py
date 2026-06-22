@@ -157,7 +157,11 @@ async def main():
 
         # Auto-save credentials if they were entered manually
         if credentials_needed:
-            save_env_credentials(api_id, api_hash, phone)
+            save_choice = Prompt.ask("[bold]Save credentials to .env for future use?[/bold]", choices=["y", "n"], default="y")
+            if save_choice == "y":
+                save_env_credentials(api_id, api_hash, phone)
+            else:
+                rprint("[dim]Skipping .env save.[/dim]")
 
         rprint("[green]✔ Authentication successful![/green]\n")
         
@@ -236,7 +240,7 @@ async def main():
                     timestamp = message.date.strftime('%Y-%m-%d %H:%M:%S')
                     clean_text = message.text.replace('\n', ' ')
                     
-                    line = f"[{timestamp}] [{sender_name}]: {message.text}\n"
+                    line = f"[{timestamp}] [{sender_name}]: {clean_text}\n"
                     f.write(line)
                     f.flush()
                     
