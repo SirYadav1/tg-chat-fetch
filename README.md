@@ -1,14 +1,16 @@
 # TG Chat Fetcher
 
-A Python tool for archiving Telegram conversations. Supports multi-target backup, date filtering, and auto-resume.
+A Python tool for archiving Telegram conversations with support for multi-target backup, date filtering, and auto-resume.
 
 ## Features
 
-- **Multi-Target Backup** — Each target gets its own file (`Backup_Name_ID.txt`)
-- **Date Filtering** — Preset ranges (1/6/12 months) or custom start/end dates
-- **Auto-Resume** — Saves progress per target, resumes where you left off
-- **Entity Caching** — Resolves senders once, faster subsequent runs
-- **2FA Support** — Works with Two-Factor Authentication enabled accounts
+| Feature | Description |
+|---------|-------------|
+| Multi-Target Backup | Each target gets its own file (`Backup_Name_ID.txt`) |
+| Date Filtering | Preset ranges (1/6/12 months) or custom start/end dates |
+| Auto-Resume | Saves progress per target, resumes where you left off |
+| Entity Caching | Resolves senders once, faster subsequent runs |
+| 2FA Support | Works with Two-Factor Authentication enabled accounts |
 
 ## Requirements
 
@@ -29,11 +31,7 @@ pip install -r requirements.txt
 python fetch_chat.py
 ```
 
-Follow the interactive prompts to:
-1. Enter your API ID, API Hash, and Phone number (saved to `.env` on first run)
-2. Select a target (username, ID, or phone number)
-3. Choose a date range
-4. Wait for the fetch to complete
+Follow the interactive prompts to enter your credentials, select a target, and choose a date range. Credentials are auto-saved to `.env` on first run.
 
 ## Project Structure
 
@@ -44,7 +42,3 @@ Follow the interactive prompts to:
 ├── .env.example       # Environment template
 └── Backup_*.txt       # Generated chat archives
 ```
-
-## License
-
-MIT
