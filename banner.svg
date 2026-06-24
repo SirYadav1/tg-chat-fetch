@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a1a3e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0f23;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2AABEE" />
+      <stop offset="100%" style="stop-color:#229ED9" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="300" fill="url(#bg)" rx="12"/>
+  
+  <!-- Grid pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(42,171,238,0.05)" stroke-width="1"/>
+  </pattern>
+  <rect width="900" height="300" fill="url(#grid)"/>
+  
+  <!-- Decorative circles -->
+  <circle cx="800" cy="60" r="120" fill="rgba(42,171,238,0.05)"/>
+  <circle cx="850" cy="250" r="80" fill="rgba(34,158,217,0.05)"/>
+  <circle cx="50" cy="200" r="100" fill="rgba(42,171,238,0.03)"/>
+  
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="6" height="300" fill="url(#accent)" rx="3"/>
+  
+  <!-- Telegram icon -->
+  <g transform="translate(60, 80)" filter="url(#glow)">
+    <circle cx="50" cy="50" r="45" fill="url(#accent)" opacity="0.15"/>
+    <circle cx="50" cy="50" r="35" fill="url(#accent)" opacity="0.3"/>
+    <path d="M 35 55 L 70 40 L 50 75 L 48 58 Z" fill="white" opacity="0.9"/>
+    <path d="M 48 58 L 70 40 L 65 65 L 48 58 Z" fill="rgba(255,255,255,0.7)"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="170" y="100" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="42" font-weight="bold" fill="white" filter="url(#shadow)">
+    TG Chat Fetch
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="170" y="135" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="18" fill="#2AABEE" opacity="0.9">
+    Telegram Chat Archiver &amp; Backup Tool
+  </text>
+  
+  <!-- Feature tags -->
+  <g transform="translate(170, 160)">
+    <rect x="0" y="0" width="130" height="28" rx="14" fill="rgba(42,171,238,0.15)" stroke="rgba(42,171,238,0.3)" stroke-width="1"/>
+    <text x="65" y="18" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="11" fill="#2AABEE" text-anchor="middle">Multi-Target</text>
+    
+    <rect x="140" y="0" width="120" height="28" rx="14" fill="rgba(42,171,238,0.15)" stroke="rgba(42,171,238,0.3)" stroke-width="1"/>
+    <text x="200" y="18" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="11" fill="#2AABEE" text-anchor="middle">Date Filter</text>
+    
+    <rect x="270" y="0" width="130" height="28" rx="14" fill="rgba(42,171,238,0.15)" stroke="rgba(42,171,238,0.3)" stroke-width="1"/>
+    <text x="335" y="18" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="11" fill="#2AABEE" text-anchor="middle">Auto-Resume</text>
+    
+    <rect x="410" y="0" width="120" height="28" rx="14" fill="rgba(42,171,238,0.15)" stroke="rgba(42,171,238,0.3)" stroke-width="1"/>
+    <text x="470" y="18" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="11" fill="#2AABEE" text-anchor="middle">2FA Support</text>
+    
+    <rect x="540" y="0" width="110" height="28" rx="14" fill="rgba(42,171,238,0.15)" stroke="rgba(42,171,238,0.3)" stroke-width="1"/>
+    <text x="595" y="18" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="11" fill="#2AABEE" text-anchor="middle">Cached</text>
+  </g>
+  
+  <!-- Code snippet decoration -->
+  <g transform="translate(170, 210)">
+    <rect x="0" y="0" width="500" height="60" rx="8" fill="rgba(0,0,0,0.3)" stroke="rgba(42,171,238,0.2)" stroke-width="1"/>
+    <text x="15" y="20" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="11" fill="#6272a4">$</text>
+    <text x="30" y="20" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="11" fill="#50fa7b">pip install</text>
+    <text x="120" y="20" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="11" fill="#f8f8f2"> telethon rich python-dotenv</text>
+    <text x="15" y="40" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="11" fill="#6272a4">$</text>
+    <text x="30" y="40" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="11" fill="#bd93f9">python</text>
+    <text x="80" y="40" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="11" fill="#f8f8f2"> fetch_chat.py</text>
+  </g>
+  
+  <!-- Version badge -->
+  <g transform="translate(730, 20)">
+    <rect x="0" y="0" width="80" height="24" rx="12" fill="rgba(80,250,123,0.15)" stroke="rgba(80,250,123,0.4)" stroke-width="1"/>
+    <text x="40" y="16" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#50fa7b" text-anchor="middle">v2.0 PRO</text>
+  </g>
+  
+  <!-- Author -->
+  <text x="780" y="280" font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="12" fill="rgba(255,255,255,0.4)" text-anchor="middle">by SirYadav1</text>
+  
+  <!-- Bottom accent line -->
+  <rect x="0" y="294" width="900" height="6" fill="url(#accent)" rx="3" opacity="0.5"/>
+</svg>
